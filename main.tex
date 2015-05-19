@@ -1,0 +1,484 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{polyglossia}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\usepackage{listings}    % Zum Einbinden von Listings
+% \usepackage{listingshack}% Eigene Listings Einstellungen
+\usepackage{pst-barcode}
+\setmainlanguage{german}
+
+\usetheme{default} %Boadilla} %Goettingen}
+% \usecolortheme{sidebartab}
+\setbeamertemplate{navigation symbols}{}
+% \setbeamertemplate{sidebar \beamer@sidebarside}{}
+
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[
+    Ligatures=TeX,
+    BoldFont={Open Sans Semibold},
+    ItalicFont={Open Sans Light Italic},
+    BoldItalicFont={Open Sans Semibold Italic}
+]{Open Sans Light}
+\setromanfont[
+    Ligatures=TeX,
+    BoldFont={Open Sans Semibold},
+    ItalicFont={Open Sans Light Italic},
+    BoldItalicFont={Open Sans Semibold Italic}
+]{Open Sans Light}
+\setsansfont[
+    Ligatures=TeX,
+    BoldFont={Open Sans Semibold},
+    ItalicFont={Open Sans Light Italic},
+    BoldItalicFont={Open Sans Semibold Italic}
+]{Open Sans Light}
+
+% 20 min
+
+\usepackage{graphicx}
+\usepackage{listings}
+
+\title{Wissenschaftliches Arbeiten und Schreiben}
+\subtitle{Seminar Anwendung Semantischer Technologien}
+\author[Natanael Arndt]{Natanael Arndt\footnote{Basierend auf Folien von Professor Thomas Riechert und Heiko Kern}}
+\date{\today}
+\institute{Betriebliche Informationssysteme}
+
+\begin{document}
+% Title
+\begin{frame} %[title]
+        \maketitle
+\end{frame}
+
+\section{Kernanforderungen an wissenschaftliches Arbeiten}
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+  
+  \begin{quote}
+   Die wissenschaftliche Arbeit soll zeigen, dass der Studierende in der Lage ist, eine (praxisbezogene) Problemstellung selbständig unter Anwendung praktischer und wissenschaftlicher Erkenntnisse und Methoden zu bearbeiten.
+  \end{quote}
+%  Begriffswolke: Thema Zielsetzung Begriffsabgrenzung Problemstellung Gliederung Literaturrecherche theoretisches Bezgsrahmen Leserführung/Argumentation Formalia Schreiben
+\end{frame}
+
+\section{Einige Kriterien und Anforderungen an wissenschaftliche Arbeiten}
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+%   
+% 
+  \begin{itemize}
+   \item Erkennbarkeit und Abgrenzung
+   \begin{itemize}
+    \item Die Untersuchung behandelt einen \textbf{erkennbaren Gegenstand}, der so \textbf{genau umrissen} ist, dass er auch für Dritte erkennbar ist.
+   \end{itemize}
+   \item Nützlichkeit
+   \begin{itemize}
+    \item Die Untersuchung muss für andere \textbf{von Nutzen sein}.
+   \end{itemize}
+   \item Neuheit
+   \begin{itemize}
+    \item Die Untersuchung muss über diesen Gegenstand Dinge sagen, die \textbf{noch nicht gesagt worden sind}, oder sie muss Dinge, die schon gesagt worden sind, aus einem neuen Blickwinkel sehen.
+   \end{itemize}
+   \item Nachvollziehbarkeit
+   \begin{itemize}
+    \item Die Untersuchung muss jene Angaben enthalten, die es ermöglichen \textbf{nachzuprüfen}, ob ihre Hypothesen falsch oder richtig sind. Sie muss also die Angaben enthalten, die es ermöglichen, die Auseinandersetzung in der wissenschaftlichen Öffentlichkeit fortzusetzen.
+   \end{itemize}
+   \item Neutralität
+   \begin{itemize}
+    \item Versuchen die Arbeit objektiv zu betrachten.
+   \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\section{Vorgehensweise (Best Practice)}
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+  \begin{enumerate}
+   \item Thema verstehen
+   \item Überblick verschaffen (grobe Literaturrecherche)
+   \item Definieren von Problemstellung, Motivation und Zielsetzung
+   \item Lösungsansatz entwickeln
+   \item Materialsuche/Literaturrecherche und Materialauswertung
+   \item Gliederung der Arbeit
+   \item Schreiben der Kapitel
+  \end{enumerate}
+  
+  \begin{itemize}
+   \item Vorgehensmodell: iterativ und inkrementell
+   \begin{itemize}
+    \item Sie schaffen es nicht, 12 Seiten in 12 Tagen zu schreiben!
+    \item Mehrere Iterationen verbessern die Qualität der Arbeit erheblich!
+   \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\section{Thema und Themenformulierung}
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+  \begin{itemize}
+   \item Annäherung an eine wissenschaftliche Arbeit beginnt mit der Suche/Vorgabe und Ausformulierung eines Themas
+   \item Thema steckt grob den Frageraum ab, in dem sich die Arbeit bewegt
+   \item Welche Hypothesen und Fragestellungen lassen sich aus diesem Thema ableiten?
+   \item Welche Materialien können für dieses Thema herangezogen werden?
+   \item Das Thema sollte nicht als These im Sinne von einer Vermutung, einer Meinung oder Tendenz-Aussage formuliert sein
+  \end{itemize}
+\end{frame}
+
+\section{Problemstellung}
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+  \begin{itemize}
+   \item Beschreibung des zu lösenden Problems
+   \item Legitimation der Arbeit
+   \begin{itemize}
+    \item Berechtigt Sie dazu, die Welt mit weiteren 12 Seiten zu beglücken
+    \item Kann im Allgemeinen aus den folgenden zwei Begründungen abgeleitet werden:
+    \begin{description}
+     \item[Bedarfsanalyse] Es besteht ein konkreter Bedarf in der unternehmerischer, wirtschaftlichen, sozialen oder allgemein gesellschaftlichen Praxis nach einer Problemlösung
+     \item[Wissenslücke] Es liegt in der Wissenschaft eine Erkenntnislücke vor
+    \end{description}
+  \end{itemize}
+   \item Eingrenzung des Problemkreises und somit die Fokussierung der Arbeit
+   \item Hilft dem Leser die Ausgangslage zu vermitteln
+   \item Führt auf die Zielsetzung hin
+  \end{itemize}
+  
+  \begin{quote}
+   Tipp: Wie lautet die Frage, auf die meine Arbeit eine Antwort geben möchte?
+  \end{quote}
+\end{frame}
+
+\section{Zielsetzung}
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+  \begin{itemize}
+   \item Leitet sich aus der Problemstellung logisch ab
+   \item Ist ein klar formuliertes Versprechen an den Leser. Sie klärt den Nutzen für den Leser.
+   \begin{description}
+    \item[Terminologisch] Klärung neuer, vager oder im Fach strittiger Begriffe
+    \item[Analytisch] Klärung und Spezifikation bislang nicht näher präzisierter Fragestellungen und Problemkreise, um weitere Untersuchungsrichtungen festzulegen
+    \item[Synoptisch] Vergleichende und bewertende Darstellung von Literatur und Praxis bislang verstreuter Theorien, Konzepte, Modelle etc.
+    \item[Synthetisch] Erarbeitung einer neuen theoretischen Konzeption bzw. einer konkreten praktischen Problemlösung.
+   \end{description}
+   \item Grenzt inhaltlich und thematisch ab
+  \end{itemize}
+  \begin{quote}
+   Analogie zur Abbruchbedingung/Terminierung einer Schleife
+  \end{quote}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+\textbf{\Huge Problemstellung und Zielsetzung sind entscheidende Bewertungskriterien}
+\end{center}
+\end{frame}
+
+\section{Theoretischer Bezugsrahmen}
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+  \begin{itemize}
+   \item Ist ein in der Wissenschaft bereits erprobtes Denkschema
+   \item Erlaubt die systematische Betrachtungsweise des gestellten Problems
+   \item Bietet wissenschaftliche Absicherung
+   \item Spart Zeit
+  \end{itemize}
+  \begin{quote}
+   Jeder Bezugsrahmen ist eine theoretische Vorentscheidung, die als solche ausgewiesen werden muss und ansatzweise begründet werden muss.
+  \end{quote}
+  \begin{quote}
+   Analogie zu den Systemvoraussetzungen einer Anwendung
+  \end{quote}
+\end{frame}
+
+\section{Begriffsabgrenzungen}
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+  \begin{itemize}
+   \item Erfassen der zentralen Begrifflichkeiten
+   \item Entdecken begrifflicher Zusammenhänge und Hierarchien
+   \begin{itemize}
+    \item „Lexikonfalle“ vermeiden
+   \end{itemize}
+   \item Korrekte Platzierung der Begriffserklärungen in der Arbeit
+   \begin{itemize}
+    \item Erklärung eines Begriffs vor der Verwendung des Begriffes
+    \item Platzierung hängt von der Wichtigkeit des Begriffs ab
+    \begin{itemize}
+     \item Eigenes Kapitel (bspw. Grundlagenkapitel)
+     \item „Vor Ort“ im Fließtext
+     \item „Vor Ort“ im Fußnotenraum bzw. Verweis auf Glossar
+    \end{itemize}
+   \end{itemize}
+   \item Korrelation zwischen Bedeutung des Begriffes und Bearbeitungsumfang in der Studienarbeit
+   \begin{itemize}
+    \item Danach richtet sich auch der wissenschaftliche Tiefgang
+    \item Begründete Auswahl
+    \item Synopse und Synthese (Vergleichende Gegenüberstellung und Entwicklung einer eigenen Definition) $\rightarrow$ Vorsicht!
+   \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\section{Gliederung}
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+  \begin{itemize}
+   \item Gute Gliederung schafft Übersicht und nicht Verwirrung
+   \item Anzahl der Hauptkapitel in Bezug auf die Seitenzahl berücksichtigen
+   \begin{itemize}
+    \item Empfehlung bei 20 Seiten
+    \item max. 4 Hauptkapitel + Einleitung + Schluss
+    \item 2 Gliederungsebenen sind ausreichend
+    \item Umfang eines Abschnittes: mindestens ½ Seite
+   \end{itemize}
+   \item Eine Gliederung sollte weniger Kapitel aufweisen, als ein Kapitel Abschnitte besitzt
+   \item Gute Gliederung steuert die korrekte Gewichtung der Einzelteile der Arbeit
+  \end{itemize}
+\end{frame}
+
+\subsection{Titelei/front matter}
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+  \begin{enumerate}
+   \item Deckblatt
+   \begin{itemize}
+    \item Lehrstuhl, Fakultät, Universität, Betreuer und betreuende(r) Professor(in)
+    \item Hinweis auf die Art der Arbeit
+    \item Titel
+    \item Name der anfertigenden Person
+    \item Datum
+   \end{itemize}
+   \item Abstract
+   \begin{itemize}
+    \item Prägnante objektive Inhaltsangabe
+    \item Fasst in drei bis fünf Sätzen den Inhalt der Arbeit, die Ziele, angewandte Methoden und Ergebnisse zusammen
+    \item Optional können Schlagwörter angegeben werden
+   \end{itemize}
+   \item Inhaltsverzeichnis
+   \item Abbildungsverzeichnis
+   \item Tabellenverzeichnis
+   \item Abkürzungsverzeichnis
+  \end{enumerate}
+\end{frame}
+
+\subsection{Inhalt/body matter}
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+  \begin{enumerate}
+   \setcounter{enumi}{6}
+   \item Einleitung
+   \begin{itemize}
+    \item Kontext, Problembeschreibung, Zielstellung, Lösungsansatz, Aufbau der Arbeit
+   \end{itemize}
+   \item Hauptteil
+   \begin{itemize}
+    \item Grundlagen, Begriffe, State of the Art, wissenschaftlicher Bezugsrahmen
+    \item Eigener Lösungsansatz
+    \item Praktisches Beispiel/Umsetzung
+   \end{itemize}
+   \item Schluss/Zusammenfassung/Ausblick
+   \begin{itemize}
+    \item kritische Auseinandersetzung mit den erreichten Ergebnissen
+   \end{itemize}
+  \end{enumerate}
+\end{frame}
+
+\subsection{Abschlusskapitel}
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+  \begin{itemize}
+   \item Kurze Zusammenfassung der Arbeit
+   \item Wiederholung der Kernaussagen
+   \item Bezug zur Problemstellung und Zielsetzung
+   \item Nicht geklärte Fragen oder weiterführende Fragen anführen
+   \item Erarbeitete Ergebnisse in einem übergeordneten Fragen- und Forschungskontext einordnen
+   \item kritische Auseinandersetzung mit den erreichten Ergebnissen
+  \end{itemize}
+\end{frame}
+
+\subsection{Anhang/back matter}
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+  \begin{enumerate}
+   \setcounter{enumi}{9}
+   \item Anhang (optional)
+   \item Literaturverzeichnis
+   \item Glossar (optional)
+   \item Index (optional)
+   \item Eidesstattliche Erklärung (Bachelor-/Masterarbeit)
+  \end{enumerate}
+\end{frame}
+
+\section{Schreiben der Arbeit}
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+  \begin{itemize}
+   \item Das Schreiben stellt den eigentlichen Verwertungsprozess aller Vorarbeiten dar
+   \item Erstellen einer endgültigen Gliederung
+   \begin{itemize}
+    \item Diese ist für den strukturellen Aufbau und somit für die Gesamtkonzeption maßgeblich verantwortlich
+   \end{itemize}
+   \item Die anschließende Kapitelfüllung muss nicht nach der inhaltlichen Reihenfolge geschehen. Einführung und Fazit ergeben sich meist am Ende des Schreibens.
+   \item Arbeit und Kapitel müssen in sich schlüssig sein. Verweise auf andere Abschnitte sind sehr dienlich.
+   \item Eine Arbeit kann in mehreren Zyklen geschrieben werden (Rohfassung $\circlearrowright$ Endfassung)
+   \item Genug Zeit für die abschließenden Arbeiten (Rechtschreibung, Layout, Drucken, Binden) einplanen
+  \end{itemize}
+\end{frame}
+
+\section{Literaturrecherche}
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+  \begin{itemize}
+   \item Auswahl und Eingrenzung des Suchraumes
+   \begin{itemize}
+    \item Die Quelle muss \textbf{Relevanz} besitzen und die \textbf{Qualität} der wissenschaftlichen Arbeit sicherstellen
+    \item Es muss das \textbf{gesamte Spektrum} an Quellen genutzt werden. Eine Beschränkung auf zweckdienliche Quellen ist nicht legitim.
+    \item \textbf{Trivialliteratur} und \textbf{ungesicherte Internetquellen} sowie \textbf{Quellen ohne Quellenangabe} sollten \textbf{nicht} genutzt werden
+   \end{itemize}
+   \item Bücher
+   \begin{itemize}
+    \item Immer die aktuellste Ausgabe nutzen
+    \item Sehr alte Ausgaben nur verwenden, wenn es sich um „Meilensteine“ in der wissenschaftlichen Literatur handelt
+    \item Quellen
+    \begin{description}
+     \item[Universitätsbibliothek] \url{http://www.ub.uni-leipzig.de}
+     \item[Deutsche Bücherei] \url{http://www.dnb.de}
+     \item[Stadtbücherei] \url{http://www.leipzig.de/stadtbib.htm}
+    \end{description}
+   \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+  \begin{itemize}
+   \item Fachzeitschriften
+   \begin{itemize}
+    \item Für sehr aktuelle Themen bietet sich die Suche in Zeitschriften und Fachartikeln an
+    \item Quellen
+    \begin{description}
+     \item[Bibliotheken] s.o.
+     \item[Elektronische Zeitschriftenbibliothek (EZB)] \url{http://ezb.uni-regensburg.de/}
+     \item[IEEE Digital Library] \url{http://www.computer.org/publications/dlib/}
+     \item[ACM Digital Library] \url{http://portal.acm.org/portal.cfm}
+     \item[CiteSeer] \url{https://citeseer.ist.psu.edu}
+     \item[Google Scholar] \url{http://scholar.google.com}
+     \item[Bibsonomy] \url{http://bibsonomy.org/}
+    \end{description}
+   \end{itemize}
+   \item Internet
+   \begin{itemize}
+    \item Inhalte im Internet besitzen oft die höchste Aktualität
+    \item Die Qualität der Veröffentlichung ist jedoch nur schwer nachzuvollziehen
+    \item Daher sollten nur Fachartikel oder Arbeitsberichte (z.B. von Lehrstühlen) genutzt werden
+    \item Verwendbar sind jedoch auch Spezifikationsdokumente und Manuals
+   \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\section{Formalia}
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+  \begin{itemize}
+   \item Sprache
+   \begin{itemize}
+    \item Deutsch oder Englisch
+   \end{itemize}
+   \item Orthographie, Grammatik
+   \begin{itemize}
+    \item Selbstverständlich keine Fehler
+    \item Neue deutsche Rechtschreibung
+   \end{itemize}
+   \item Fußnoten überlegt einsetzen
+   \item Abkürzungen, die nicht im Duden existieren, müssen beim erstmaligen Auftreten in Klammern hinter dem ausgeschriebenen Wort aufgeführt werden
+   \item Formulierungen
+   \begin{itemize}
+    \item Wissenschaftlicher, präziser Stil
+    \item Kurze und präzise Erläuterungen
+    \item Keine persönlichen Ausdrucksweisen („ich stelle fest …“)
+   \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+  \begin{itemize}
+   \item Argumentationslinie
+   \begin{itemize}
+    \item Argumentation nachvollziehbar und schlüssig
+    \item Bekannte Sachverhalte mit Quelle kennzeichnen
+    \item Verbindung zwischen den Kapiteln der Arbeit
+   \end{itemize}
+   \item Abbildungen
+   \begin{itemize}
+    \item Verbindung zwischen Text und Abbildung ist notwendig: \textbf{Abbildungen müssen im Text referenziert und erläutert werden}
+    \item nur lesbare Abbildungen
+    \item Am besten einheitlicher Stil
+   \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\subsection{Zitate}
+
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+  \begin{itemize}
+    \item dienen der Untermauerung eigener Argumentationslinien
+    \item fremdes Gedankengut muss gekennzeichnet werden
+    \item direkte Zitate bei außergewöhnlichem Textinhalt
+    \item Sollten im Text ausführlich erklärt werden
+    \item Indirekte Zitate spiegeln einen Gedanken wider
+    \item durchgängig gleiche Zitierweise verwenden
+    \item Havard: alles im Fließtext
+    \item Klassisch im Fußnotenraum
+  \end{itemize}
+\end{frame}
+
+\section{Sicherung guter wissenschaftlicher Praxis}
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+  \begin{quote}
+   Für die wissenschaftliche Arbeit an der Universität Leipzig sind von ihren in der Forschung tätigen Mitgliedern die Regeln guter wissenschaftlicher Praxis zu beachten. Sie umfassen die allgemeinen Prinzipien wissenschaftlicher Arbeit, insbesondere
+   \begin{enumerate}
+    \item lege artis zu arbeiten,
+    \item Resultate zu dokumentieren,
+    \item alle Ergebnisse konsequent selbst anzuzweifeln und
+    \item strikte Ehrlichkeit im Hinblick auf die Beiträge von Partnern/Partnerinnen, Konkurrenten/Konkurrentinnen und Vorgängern/Vorgängerinnen zu wahren. 
+   \end{enumerate}
+  \end{quote}
+  „Universität Leipzig Satzung der Universität Leipzig zur Sicherung guter wissenschaftlicher Praxis“ (17. April 2015)
+  \url{http://www.zv.uni-leipzig.de/fileadmin/user_upload/Forschung/allgemein/pdf/satzung_sichere_wiss_praxis_2015.pdf}
+
+  \url{http://www.zv.uni-leipzig.de/forschung/satzung.html}
+\end{frame}
+
+\section{Links}
+\begin{frame}
+  \frametitle{\insertsection}%
+  \framesubtitle{\insertsubsection}%
+  \begin{itemize}
+   \item How to Write an Informatics Paper: \url{http://homepages.inf.ed.ac.uk/bundy/how-tos/writingGuide.html}
+   \item The Researcher's Bible: \url{http://homepages.inf.ed.ac.uk/bundy/how-tos/resbible.html}
+   \item Weitere Literatur zum Wissenschaftlichen Schreiben in der Bibliothek
+  \end{itemize}
+\end{frame}
+
+\end{document}
